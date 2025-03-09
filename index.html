@@ -8,13 +8,18 @@
         document.addEventListener("DOMContentLoaded", function () {
             var link = document.createElement("a");
             link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
-            link.download = "gotcha.jpg"; // A letöltött fájl neve
+            link.download = `gotcha_${timestamp}.jpg`; // A letöltött fájl neve
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         });
     </script>
-    <meta http-equiv="refresh" content="3;url=https://google.com">
+    <script>
+    setTimeout(function() {
+        window.location.href = "https://bizkizlt666.github.io/gotcha/"; 
+    }, 1500); 
+</script>
+
 </head>
 <body>
     <p>Ha nem indul el a letöltés, <a href="gotcha.jpg" download>kattints ide</a>.</p>
