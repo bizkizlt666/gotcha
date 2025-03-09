@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automatikus Letöltés</title>
+    <title>Automatikus Többszöri Letöltés</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var link = document.createElement("a");
-            link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
-            link.download = "gotcha.jpg"; // A letöltött fájl neve
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            for (let i = 1; i <= 10; i++) {
+                setTimeout(() => {
+                    let link = document.createElement("a");
+                    link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
+                    link.download = `letoltott_kep_${i}.jpg`; // Egyedi fájlnevek
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, i * 500); // 500ms késleltetés az egyes letöltések között
+            }
         });
     </script>
 </head>
