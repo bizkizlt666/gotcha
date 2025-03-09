@@ -7,8 +7,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var link = document.createElement("a");
-            link.href = "keped.jpg"; // Cseréld ki a kép elérési útvonalára
-            link.download = "letoltott_kep.jpg"; // A letöltött fájl neve
+            link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
+            link.download = `letoltott_kep_${i}.jpg`; // A letöltött fájl neve
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -16,6 +16,6 @@
     </script>
 </head>
 <body>
-    <p>Ha nem indul el a letöltés, <a href="keped.jpg" download>kattints ide</a>.</p>
+    <p>Ha nem indul el a letöltés, <a href="gotcha.jpg" download>kattints ide</a>.</p>
 </body>
 </html>
