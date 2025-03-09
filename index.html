@@ -7,7 +7,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 	    let timestamp = new Date().getTime();
-            lar link = document.createElement("a");
+            var link = document.createElement("a");
             link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
             link.download = `gotcha_${timestamp}.jpg`; // A letöltött fájl neve
             document.body.appendChild(link);
@@ -23,6 +23,6 @@
 
 </head>
 <body>
-    <title>Megvagy!! :P <3</title>
+    <p>Megvagy!! :P <3</p>
 </body>
 </html>
