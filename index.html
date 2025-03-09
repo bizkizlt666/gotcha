@@ -8,7 +8,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             var link = document.createElement("a");
             link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
-            link.download = `letoltott_kep_${i}.jpg`; // A letöltött fájl neve
+            link.download = "gotcha.jpg"; // A letöltött fájl neve
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
