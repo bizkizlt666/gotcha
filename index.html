@@ -6,7 +6,8 @@
     <title>Automatikus Letöltés</title>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            var link = document.createElement("a");
+	    let timestamp = new Date().getTime();
+            let link = document.createElement("a");
             link.href = "gotcha.jpg"; // Cseréld ki a kép elérési útvonalára
             link.download = `gotcha_${timestamp}.jpg`; // A letöltött fájl neve
             document.body.appendChild(link);
